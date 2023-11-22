@@ -19,4 +19,4 @@ jobs:
         uses: Emdien/oquare-metrics@v2.1
         with:
           ontology-folders: ontologies
-          contents-folder: oquare-results
+          contents-folder: oquare
