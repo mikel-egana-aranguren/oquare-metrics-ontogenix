@@ -18,10 +18,3 @@ jobs:
         uses: Emdien/oquare-metrics@v2.1
         with:
           ontology-folders: ontologies
-      - uses: actions/download-artifact@v3
-        with:
-          name: ontologies-download
-          path: ontologies
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: oquare
