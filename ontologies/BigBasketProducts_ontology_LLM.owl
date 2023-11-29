@@ -23,59 +23,75 @@
     
 
 
-    <!-- http://schema.org/hasOffer -->
+    <!-- http://schema.org/offers -->
 
-    <ObjectProperty rdf:about="http://schema.org/hasOffer">
-        <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
-        <rdfs:range rdf:resource="https://vocab.um.es#offer"/>
+    <ObjectProperty rdf:about="http://schema.org/offers">
+        <inverseOf rdf:resource="https://vocab.um.es#hasOffer"/>
     </ObjectProperty>
     
 
 
-    <!-- https://vocab.um.es#hasAbsoluteUrl -->
+    <!-- https://vocab.um.es#Absolute_Url -->
 
-    <ObjectProperty rdf:about="https://vocab.um.es#hasAbsoluteUrl">
-        <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
-    </ObjectProperty>
-    
-
-
-    <!-- https://vocab.um.es#hasBrand -->
-
-    <ObjectProperty rdf:about="https://vocab.um.es#hasBrand">
+    <ObjectProperty rdf:about="https://vocab.um.es#Absolute_Url">
         <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
     </ObjectProperty>
     
 
 
-    <!-- https://vocab.um.es#hasCategory -->
+    <!-- https://vocab.um.es#Brand -->
 
-    <ObjectProperty rdf:about="https://vocab.um.es#hasCategory">
+    <ObjectProperty rdf:about="https://vocab.um.es#Brand">
         <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
     </ObjectProperty>
     
 
 
-    <!-- https://vocab.um.es#hasEligibleQuantity -->
+    <!-- https://vocab.um.es#BrandName -->
 
-    <ObjectProperty rdf:about="https://vocab.um.es#hasEligibleQuantity">
-        <rdfs:domain rdf:resource="https://vocab.um.es#offer"/>
-    </ObjectProperty>
-    
-
-
-    <!-- https://vocab.um.es#hasImage -->
-
-    <ObjectProperty rdf:about="https://vocab.um.es#hasImage">
+    <ObjectProperty rdf:about="https://vocab.um.es#BrandName">
         <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
     </ObjectProperty>
     
 
 
-    <!-- https://vocab.um.es#hasSubCategory -->
+    <!-- https://vocab.um.es#Category -->
 
-    <ObjectProperty rdf:about="https://vocab.um.es#hasSubCategory">
+    <ObjectProperty rdf:about="https://vocab.um.es#Category">
         <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es#Image_Url -->
+
+    <ObjectProperty rdf:about="https://vocab.um.es#Image_Url">
+        <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es#SubCategory -->
+
+    <ObjectProperty rdf:about="https://vocab.um.es#SubCategory">
+        <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es#eligibleQuantity -->
+
+    <ObjectProperty rdf:about="https://vocab.um.es#eligibleQuantity">
+        <rdfs:domain rdf:resource="http://schema.org/Offer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es#hasOffer -->
+
+    <ObjectProperty rdf:about="https://vocab.um.es#hasOffer">
+        <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
+        <rdfs:range rdf:resource="http://schema.org/Offer"/>
     </ObjectProperty>
     
 
@@ -91,85 +107,93 @@
     
 
 
-    <!-- http://schema.org/hasPriceCurrency -->
+    <!-- http://schema.org/priceCurrency -->
 
-    <DatatypeProperty rdf:about="http://schema.org/hasPriceCurrency">
-        <rdfs:domain rdf:resource="https://vocab.um.es#offer"/>
+    <DatatypeProperty rdf:about="http://schema.org/priceCurrency">
+        <rdfs:domain rdf:resource="http://schema.org/Offer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasAbsoluteUrl -->
+    <!-- https://vocab.um.es#Absolute_Url -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasAbsoluteUrl">
+    <DatatypeProperty rdf:about="https://vocab.um.es#Absolute_Url">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasBrand -->
+    <!-- https://vocab.um.es#Brand -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasBrand">
+    <DatatypeProperty rdf:about="https://vocab.um.es#Brand">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasCategory -->
+    <!-- https://vocab.um.es#BrandName -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasCategory">
+    <DatatypeProperty rdf:about="https://vocab.um.es#BrandName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasDiscountPrice -->
+    <!-- https://vocab.um.es#Category -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasDiscountPrice">
-        <rdfs:domain rdf:resource="https://vocab.um.es#offer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </DatatypeProperty>
-    
-
-
-    <!-- https://vocab.um.es#hasEligibleQuantity -->
-
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasEligibleQuantity">
+    <DatatypeProperty rdf:about="https://vocab.um.es#Category">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasImage -->
+    <!-- https://vocab.um.es#DiscountPrice -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasImage">
+    <DatatypeProperty rdf:about="https://vocab.um.es#DiscountPrice">
+        <rdfs:domain rdf:resource="http://schema.org/Offer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://vocab.um.es#Image_Url -->
+
+    <DatatypeProperty rdf:about="https://vocab.um.es#Image_Url">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasPrice -->
+    <!-- https://vocab.um.es#Price -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasPrice">
-        <rdfs:domain rdf:resource="https://vocab.um.es#offer"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <DatatypeProperty rdf:about="https://vocab.um.es#Price">
+        <rdfs:domain rdf:resource="http://schema.org/Offer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasProductName -->
+    <!-- https://vocab.um.es#Quantity -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasProductName">
-        <rdfs:domain rdf:resource="https://vocab.um.es#sales_product"/>
+    <DatatypeProperty rdf:about="https://vocab.um.es#Quantity">
+        <rdfs:domain rdf:resource="http://schema.org/Offer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasSubCategory -->
+    <!-- https://vocab.um.es#SubCategory -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasSubCategory">
+    <DatatypeProperty rdf:about="https://vocab.um.es#SubCategory">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://vocab.um.es#eligibleQuantity -->
+
+    <DatatypeProperty rdf:about="https://vocab.um.es#eligibleQuantity">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
@@ -186,9 +210,17 @@
     
 
 
-    <!-- https://vocab.um.es#offer -->
+    <!-- http://schema.org/Offer -->
 
-    <Class rdf:about="https://vocab.um.es#offer"/>
+    <Class rdf:about="http://schema.org/Offer"/>
+    
+
+
+    <!-- http://schema.org/Product -->
+
+    <Class rdf:about="http://schema.org/Product">
+        <equivalentClass rdf:resource="https://vocab.um.es#sales_product"/>
+    </Class>
     
 
 

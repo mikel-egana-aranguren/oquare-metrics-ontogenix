@@ -6,9 +6,37 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:schema="http://schema.org/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
     
 
 
@@ -52,66 +80,36 @@
     
 
 
-    <!-- https://vocab.um.es#FAIR_URI -->
+    <!-- https://vocab.um.es#productId -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#FAIR_URI"/>
-    
-
-
-    <!-- https://vocab.um.es#ProductId -->
-
-    <DatatypeProperty rdf:about="https://vocab.um.es#ProductId"/>
-    
-
-
-    <!-- https://vocab.um.es#Rating -->
-
-    <DatatypeProperty rdf:about="https://vocab.um.es#Rating"/>
-    
-
-
-    <!-- https://vocab.um.es#Timestamp -->
-
-    <DatatypeProperty rdf:about="https://vocab.um.es#Timestamp"/>
-    
-
-
-    <!-- https://vocab.um.es#UserId -->
-
-    <DatatypeProperty rdf:about="https://vocab.um.es#UserId"/>
-    
-
-
-    <!-- https://vocab.um.es#hasProductId -->
-
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasProductId">
+    <DatatypeProperty rdf:about="https://vocab.um.es#productId">
         <rdfs:domain rdf:resource="https://vocab.um.es#SalesArticle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasRating -->
+    <!-- https://vocab.um.es#rating -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasRating">
+    <DatatypeProperty rdf:about="https://vocab.um.es#rating">
         <rdfs:domain rdf:resource="https://vocab.um.es#SalesOrder"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasTimestamp -->
+    <!-- https://vocab.um.es#timestamp -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasTimestamp">
+    <DatatypeProperty rdf:about="https://vocab.um.es#timestamp">
         <rdfs:domain rdf:resource="https://vocab.um.es#SalesOrder"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </DatatypeProperty>
     
 
 
-    <!-- https://vocab.um.es#hasUserId -->
+    <!-- https://vocab.um.es#userId -->
 
-    <DatatypeProperty rdf:about="https://vocab.um.es#hasUserId">
+    <DatatypeProperty rdf:about="https://vocab.um.es#userId">
         <rdfs:domain rdf:resource="https://vocab.um.es#Customer"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
@@ -131,25 +129,19 @@
 
     <!-- https://vocab.um.es#Customer -->
 
-    <Class rdf:about="https://vocab.um.es#Customer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </Class>
+    <Class rdf:about="https://vocab.um.es#Customer"/>
     
 
 
     <!-- https://vocab.um.es#SalesArticle -->
 
-    <Class rdf:about="https://vocab.um.es#SalesArticle">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </Class>
+    <Class rdf:about="https://vocab.um.es#SalesArticle"/>
     
 
 
     <!-- https://vocab.um.es#SalesOrder -->
 
-    <Class rdf:about="https://vocab.um.es#SalesOrder">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </Class>
+    <Class rdf:about="https://vocab.um.es#SalesOrder"/>
 </rdf:RDF>
 
 
